@@ -1,0 +1,24 @@
+{
+  "name": "bharatfd-assignment",
+  "version": "1.0.0",
+  "description": "backend project which integrate ckeditor and redis for caching",
+  "homepage": "https://github.com/NexusNeeraj/rich-text-editor#readme",
+  "bugs": {
+    "url": "https://github.com/NexusNeeraj/rich-text-editor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NexusNeeraj/rich-text-editor.git"
+  },
+  "license": "ISC",
+  "author": "Neeraj",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.9.6"
+  }
+}
