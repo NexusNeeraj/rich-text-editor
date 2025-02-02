@@ -1,0 +1,14 @@
+const chai = require("chai");
+const chaiHttp = require("chai-http");
+const app = require("../server");
+
+chai.use(chaiHttp);
+const { expect } = chai;
+
+describe("FAQ API", () => {
+  it("should fetch all FAQs", async () => {
+    const res = await chai.request(app).get("/api/faqs");
+    expect(res).to.have.status(200);
+    expect(res.body).to.be.an("array");
+  });
+});
