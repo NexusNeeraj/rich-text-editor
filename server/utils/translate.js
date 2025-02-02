@@ -1,6 +1,5 @@
 const axios = require("axios");
-
-const GOOGLE_TRANSLATE_API_KEY = "YOUR_GOOGLE_API_KEY"; // Replace with your API Key
+require("dotenv").config();
 
 async function translateText(text, targetLang) {
   try {
@@ -11,7 +10,7 @@ async function translateText(text, targetLang) {
         params: {
           q: text,
           target: targetLang,
-          key: GOOGLE_TRANSLATE_API_KEY,
+          key: process.env.GOOGLE_TRANSLATE_API_KEY,
         },
       }
     );
@@ -19,7 +18,7 @@ async function translateText(text, targetLang) {
     return response.data.data.translations[0].translatedText;
   } catch (error) {
     console.error("Translation error:", error);
-    return text; // Fallback to original text
+    return text;
   }
 }
 
